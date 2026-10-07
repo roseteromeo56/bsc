@@ -2276,7 +2276,8 @@ func (p *Parlia) backOffTime(snap *Snapshot, parent, header *types.Header, val c
 		if p.chainConfig.IsBohr(header.Number, header.Time) {
 			randSeed = header.Number.Uint64() / uint64(snap.TurnLength)
 		}
-		s := rand.NewSource(int64(randSeed))
+		// All validators must derive the same backoff order from block state.
+		s := rand.NewSource(int64(randSeed)) // nosemgrep: go-security/math-rand-insecure
 		r := rand.New(s)
 		n := len(validators)
 		backOffSteps := make([]uint64, 0, n)
