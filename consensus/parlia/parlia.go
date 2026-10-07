@@ -9,7 +9,7 @@ import (
 	"io"
 	"math"
 	"math/big"
-	"math/rand"
+	"crypto/rand"
 	"sort"
 	"strings"
 	"sync"
