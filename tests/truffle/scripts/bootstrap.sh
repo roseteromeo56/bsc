@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-workspace=$(cd "`dirname $0`"; pwd)/..
 workspace=$(cd "$(dirname "$0")"; pwd)/..
 
 function prepare() {
