@@ -3,7 +3,7 @@
 echo "0. prepare---------------------------------------------------------------------------------"
 echo 123abc7890 > bls-password.txt
 echo 123abc7891 > bls-password1.txt
-basedir=$(cd `dirname $0`; pwd)
+basedir=$(cd "`dirname $0`"; pwd)
 workspace=${basedir}/../../../
 
 echo "1. create a bls account--------------------------------------------------------------------"
